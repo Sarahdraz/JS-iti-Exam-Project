@@ -1,7 +1,8 @@
 const signUpBtn = document.getElementById('signUp');
 const signInBtn = document.getElementById('signIn');
 const container = document.getElementById('container');
-
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
 function isMobile() {
   return window.innerWidth <= 768;
 }
@@ -101,6 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const isRegistered = localStorage.getItem('isRegistered');
 
   if (isRegistered === 'true') {
+    container.classList.remove('right-panel-active');
     Swal.fire({
       icon: 'info',
       title: 'You are already registered',
@@ -110,6 +112,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }).then(() => {
   container.classList.remove('right-panel-active');
     });
+  }
+  else {
+    // Show sign-up panel by default
+    container.classList.add('right-panel-active');
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
@@ -156,8 +162,7 @@ function handleLogin(e) {
     });
   }
 }
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
+
 
 
 signUpButton.addEventListener('click', () => {
