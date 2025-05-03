@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+ 
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <header> <header><button id="themeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 9999; padding: 10px 15px; font-size: 12px; border-radius: 8px; color: black; border: 1px solid black; ">🌙 Dark Mode</button></header></header>
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form onsubmit="handleSignUp(event)">
+        <h1>Registration</h1>
+        <input id="firstName" type="text" placeholder="First Name" required />
+        <input id="lastName" type="text" placeholder="Last Name" required />
+        <input id="email" type="email" placeholder="Email" required />
+        <input id="password" type="password" placeholder="Password" required />
+        <input id="confirmPassword" type="password" placeholder="Confirm Password" required />
+        <button type="submit">Sign Up</button>
+    
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form onsubmit="handleLogin(event)">
+        <h1>Sign in</h1>
+        <input id="loginEmail" type="email" placeholder="Email" required />
+        <input id="loginPassword" type="password" placeholder="Password" required />
+        <button>Login</button>
+       
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left overlay-up">
+          <h1>Hello, Welcome!</h1>
+          <p>Register with your personal details to Enter your Exam
+            <br> <br>
+ <small>Already have an account?</small>
+          </p>
+          
+          <button class="ghost" id="signIn">Login</button>
+        </div>
+        <div class="overlay-panel overlay-right overlay-down">
+          <h1>Welcome Back!</h1>
+          <p>Don’t have an account?</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+</body>
+</html>
